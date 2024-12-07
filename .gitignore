@@ -5,6 +5,8 @@ __pycache__/
 
 # Code Files, not sure where this goes
 my_secrets.py
+animation_trial.py
+exp3d.gif
 
 # C extensions
 *.so
