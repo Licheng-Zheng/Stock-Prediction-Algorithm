@@ -1,9 +1,14 @@
 import numpy as np 
 from my_secrets import stock_list
 
+
+
 def create(stock_ticker):
     all_information_list = []
     
+    # apparently, I need to normalize my data, because the dumbass neural network can't handle it
+    maxes = []
+
     for ticker in stock_list: 
         try: 
             file_name = f"{ticker}_data.npy"
@@ -13,7 +18,6 @@ def create(stock_ticker):
             
             # Gets the shape of the data, mostly used to make sure there's nothing wrong with the data
             shape_of_data = data.shape
-            print(shape_of_data)
             
             # Only takes date in which there are more than 7 days ahead and 30 days behind, gives it enough information to predict
             for actual_date in range(7, shape_of_data[0] - 31):
@@ -52,10 +56,25 @@ def create(stock_ticker):
     
 
     array_of_information = np.array(all_information_list)
-    print(array_of_information.shape)
-    print(array_of_information[-1].shape)
+
+    # print(array_of_information[50])
+
+    for data_piece in array_of_information:
+        if (data_piece[147] + data_piece[146])/2 >= data_piece[150]:
+            data_piece[150] = 1
+        elif (data_piece[147] + data_piece[146])/2 <= data_piece[150]:
+            data_piece[150] = 0
+
+    for x in range(0, 150):
+        local_max = max(array_of_information[:, x])
+        array_of_information[:, x] = array_of_information[:, x] / local_max
+
     np.save(f"all_information.npy", array_of_information)
     print("List created!")
+    unique, counts = np.unique(array_of_information[:, 150], return_counts=True)
+    occurrences = dict(zip(unique, counts))
+    print(occurrences.get(1, 0))
+    print(occurrences.get(0, 0))
     
 def create_dataset():
     # Tells the program which stocks you want to iterate over

@@ -7,6 +7,7 @@ __pycache__/
 my_secrets.py
 animation_trial.py
 exp3d.gif
+\media
 
 # C extensions
 *.so
