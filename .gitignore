@@ -8,6 +8,7 @@ my_secrets.py
 animation_trial.py
 exp3d.gif
 \media
+iss.py 
 
 # C extensions
 *.so
