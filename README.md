@@ -73,7 +73,7 @@ Results for the genetic algorithm and stochastic gradient descent algorithm appr
 ![image](https://github.com/user-attachments/assets/43989be7-adcf-40ba-aebb-a40025cd736a)
 Through the results of this method, it is seen that the combined genetic and stochastic gradient descent algorithm are capable of combining to create a very effective algorithm, achieving very low error on average. This is while taking about the same amount of time and memory to optimize as the solely genetic algorithm. 
 
-The following two paragraphs are ripped out of my essay, but I think it is some pretty good analysis!
+The following two paragraphs are ripped out of my essay, but I think it is some pretty good analysis:
 Through this experiment, it can be assumed that the introduction of genetic algorithms likely led to large improvements in prediction capabilities, allowing firms to more accurately predict the future performance of a stock. In order to capitalize on this increase in accuracy, investment funds would have increased their investments and spending on RAM, allowing them to train their models faster and with more parameters, improving accuracy. 
 
 This extended essay sought out to determine the impact genetic algorithms had on the investment industry. Through the experiment and analysis conducted within this paper, it can be concluded that genetic algorithms improved the accuracy of stock prediction models, which likely increased interest within these algorithms. Although this experiment had numerous limitations, this investigation serves as a demonstration of how stock prediction may have been impacted by genetic algorithms, and how they could continue to impact this industry in the future. 
