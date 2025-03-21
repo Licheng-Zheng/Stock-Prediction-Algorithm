@@ -56,11 +56,31 @@ Here are some of the terms that I used in the extended essay that apply to genet
 | Fitness | How good an individual is at predicting the outcome of input |
 | Stopping Criteria | A metric that is used to stop the traoning of the genetic algorithm |
 
-
-
 ### Findings of the Project 
+Ok, now for the actually cool part of the project! Did the project reveal anything cool? 
+
+Results for the stochastic gradient descent approach: 
+![image](https://github.com/user-attachments/assets/d47e932d-6dd4-43dc-b86f-4bda64a5827d)
+In this approach, a very sharp drop off is seen near the start of training, always before the 20th epoch. After this initial decrease, however, optimization is extremely slow. A very small amount of memory is consumed by this algorithm, which is due to the fact it does not have to store a large amount of information. It is also able to train quickly and provide decent accuracy. 
+
+Results for the genetic algorithm approach 
+![image](https://github.com/user-attachments/assets/592d9355-1751-4a38-9001-483d9b15234b)
+Through this data, it is seen that genetic algorithms consume far more memory and require much more time to train, for very slight increases in accuracy. This memory consumption arises from the fact it has to store the values for the weights and biases of 600 different neural networks. Through the green average loss of a generation, it is also seen that a large amount of memory is wasted on models that go not contribute to the improvement in loss. This is indicative that the error function has many peaks and troughs, and shows that the reproduction of two fit chromosomes frequently results in an unfit chromosome. 
+
+Despite this shortcoming, the fact it is able to find solutions with lower losses shows that it is capable of searching through a larger search space. 
+
+Results for the genetic algorithm and stochastic gradient descent algorithm approach
+![image](https://github.com/user-attachments/assets/43989be7-adcf-40ba-aebb-a40025cd736a)
+Through the results of this method, it is seen that the combined genetic and stochastic gradient descent algorithm are capable of combining to create a very effective algorithm, achieving very low error on average. This is while taking about the same amount of time and memory to optimize as the solely genetic algorithm. 
+
+The following two paragraphs are ripped out of my essay, but I think it is some pretty good analysis!
+Through this experiment, it can be assumed that the introduction of genetic algorithms likely led to large improvements in prediction capabilities, allowing firms to more accurately predict the future performance of a stock. In order to capitalize on this increase in accuracy, investment funds would have increased their investments and spending on RAM, allowing them to train their models faster and with more parameters, improving accuracy. 
+
+This extended essay sought out to determine the impact genetic algorithms had on the investment industry. Through the experiment and analysis conducted within this paper, it can be concluded that genetic algorithms improved the accuracy of stock prediction models, which likely increased interest within these algorithms. Although this experiment had numerous limitations, this investigation serves as a demonstration of how stock prediction may have been impacted by genetic algorithms, and how they could continue to impact this industry in the future. 
 
 ### Limitations of the Experiment
+- The trials were all run on an AMD Ryzen 5 CPU, which is, although not a potato, it is also not a pineapple. In the future, I might try to leverage some better processors using google colab, or maybe use a GPU for some parallel processing. This experiment was just to analyze how everything compared, and I didn't want to give any of the algorithms an unfair advantage (which obviously is not a restriction in the real world, in which any advantage is a win).
+- I probably could have gotten a lot more data than just Boeing, IBM and Apple, but these were the first stocks that came to mind, and are kind of the default. I wonder what would ahve happened if I chose some smaller companies, that were not always in such a strong position as these companies, and how that might have affected the accuracy of my models. 
 
 ## What I've Learned
 Throughout the writing process, I had to learn how to implement stochastic gradient descent, which required me to learn about partial derivatives used in back propagation. I also learned about how genetic algorithms worked, the different parts of it, different selection methods (to chose the next generation), and how future generations are created. 
