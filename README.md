@@ -94,3 +94,8 @@ Originally, I wanted to research how computers had impacted the field of stock p
 
 
 ## Next Steps for this Project
+Some things that I want to look more into for future projects include using different prediction models for stock prediction. For example, a model that is seen frequently in this domain is LSTM, I wonder how this would change the accuracy of this experiment. I also hope to create some sentiment analysis of the news, allowing me to predict the future performance of a stock depending on what the news is saying. 
+
+After a conference with my EE mentor, he recommended I look into machine learning sites like Kaggle, and see how winning solutions design their algorithms: what is their philosophy and thought process for creating winning algorithms? I hope to learn from these algorithms to myself create better algorithms that achieve better accuracy. 
+
+If I have more stuff, I add them here in the future!! byebye
