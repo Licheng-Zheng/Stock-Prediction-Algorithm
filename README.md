@@ -33,7 +33,7 @@ This value is specific to the stochastic gradient descent approach. It specifies
 
 The learning rate of 0.005 was chosen for the stochastic gradient descent as it has a good trade off between speed and accuracy. 
 
-**Genetic Algorithm Only: Population Size: 600 **
+**Genetic Algorithm Only: Population Size: 600**
 This value is specific to genetic algorithms. It specifies how many individual solutions will be generated to attempt to achieve the lowest error possible. A larger population typically means the algorithm will be able to search through a much larger number of possible solutions, increasing the chance it finds the optimal solution. This larger search space comes at the expense of RAM usage. 
 
 Although typically, the greater the population size the better, I chose this number to demonstrate the effectiveness and requirements of genetic algorithms. 
@@ -42,6 +42,19 @@ Although typically, the greater the population size the better, I chose this num
 This value is specific to genetic algorithms. It specifies the chance that a number will change pr “mutate” from the previous generation. This is vital as it expands the search space of the algorithm, and ensures the optimal solution can still be found even if it is not part of the original population. A mutation rate too low or zero means the genetic algorithm cannot search in areas individuals were not initiated within, while a mutation rate too high results in the neural network not retaining any semblance of the previous generation. 
 
 I chose the value of 0.01 as it would ensure steady optimization while not preventing the algorithm from expanding the search area. 
+
+Here are some of the terms that I used in the extended essay that apply to genetic algorithms, this is just copied over from my essay: 
+| Term | Definition | 
+| -- | -- |
+| Genes |  A data type that determines how an individual will “react” to a particular data input. Typically known as weights outside the field of genetic algorithms.|
+| Solution | A possible way of answering the task, does not mean it is the most optimal way of completing a task (which is called the optimal solution). In this context, optimal is the model that most accurately predicts if a stock will increase or decrease. |
+| Chromosomes | A string or other data type that contains at least one gene for an individual. In the case of a neural network, it is an array with the weights and biases. This is what the genetic algorithm will be optimizing. |
+| Individual | A possible solution to the issue, with its unique chromosome. |
+| Population | The collection of all individuals |
+| Variation | The variety of traits present within the population of chromosomes. Without variation, all chromosomes in a population would be identical| 
+| Generation | Iteration of individuals since the beginning of the genetic algorithm. Each generation is built upon the previous generation (other than the first one, which is initialized randomly) |
+| Fitness | How good an individual is at predicting the outcome of input |
+| Stopping Criteria | A metric that is used to stop the traoning of the genetic algorithm |
 
 
 
