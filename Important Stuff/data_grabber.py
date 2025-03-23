@@ -1,3 +1,5 @@
+# This code is what gets the stock data that we train the models on afterwards. 
+
 # important for making the API call to alpha vantage 
 import requests
 
